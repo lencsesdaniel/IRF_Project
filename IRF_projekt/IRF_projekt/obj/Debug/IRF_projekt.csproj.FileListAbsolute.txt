@@ -1,0 +1,9 @@
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\IRF_projekt.exe.config
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\IRF_projekt.exe
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\IRF_projekt.pdb
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.csprojAssemblyReference.cache
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.Properties.Resources.resources
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.csproj.GenerateResource.cache
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.csproj.CoreCompileInputs.cache
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.exe
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.pdb
