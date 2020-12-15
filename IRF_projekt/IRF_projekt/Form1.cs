@@ -41,6 +41,35 @@ namespace IRF_projekt
                 }
             }
         }
-          
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<Gyerek> pillangó_csoport = (from x in gyerekek
+                                   where x.Csoport == "pillangó"
+                                   select x).ToList();
+            
+            dataGridView1.DataSource = pillangó_csoport; 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
