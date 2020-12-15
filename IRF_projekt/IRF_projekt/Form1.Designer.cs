@@ -36,9 +36,9 @@ namespace IRF_projekt
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 109);
+            this.dataGridView1.Location = new System.Drawing.Point(264, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(524, 426);
             this.dataGridView1.TabIndex = 0;
             // 
             // Form1

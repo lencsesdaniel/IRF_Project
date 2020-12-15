@@ -8,9 +8,11 @@ namespace IRF_projekt.Classes
 {
     class Gyerek
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Group { get; set; }
-        public bool Trip { get; set; }
+        public string Név { get; set; }
+        public int Kor { get; set; }
+        public string Csoport { get; set; }
+        public bool Kirándul { get; set; }
+        public bool Ottalszik { get; set; }
+        public int Étkezések_száma {get; set;}
     }
 }

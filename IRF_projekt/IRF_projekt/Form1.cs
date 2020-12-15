@@ -31,10 +31,12 @@ namespace IRF_projekt
                     string[] line = sr.ReadLine().Split(';');
 
                     Gyerek gyerek = new Gyerek();
-                    gyerek.Name = line[0];
-                    gyerek.Age = Convert.ToInt32(line[1]);
-                    gyerek.Group = line[2];
-                    gyerek.Trip = Convert.ToBoolean(line[3]);
+                    gyerek.Név = line[0];
+                    gyerek.Kor = Convert.ToInt32(line[1]);
+                    gyerek.Csoport = line[2];
+                    gyerek.Kirándul = Convert.ToBoolean(line[3]);
+                    gyerek.Ottalszik = Convert.ToBoolean(line[4]);
+                    gyerek.Étkezések_száma = Convert.ToInt32(line[5]);
                     gyerekek.Add(gyerek);
                 }
             }
