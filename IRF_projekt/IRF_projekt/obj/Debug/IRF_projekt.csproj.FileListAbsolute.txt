@@ -8,3 +8,4 @@ C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.exe
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.pdb
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.Form1.resources
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.Csoport.resources

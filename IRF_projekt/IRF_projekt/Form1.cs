@@ -14,7 +14,7 @@ namespace IRF_projekt
 {
     public partial class Form1 : Form
     {
-        List<Gyerek> gyerekek = new List<Gyerek>();
+        public List<Gyerek> gyerekek = new List<Gyerek>();
         public Form1()
         {
             InitializeComponent();
@@ -44,32 +44,33 @@ namespace IRF_projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Gyerek> pillangó_csoport = (from x in gyerekek
-                                   where x.Csoport == "pillangó"
-                                   select x).ToList();
-            
-            dataGridView1.DataSource = pillangó_csoport; 
+            Csoport csoport = new Csoport(gyerekek, "pillangó");
+            csoport.Show();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Csoport csoport = new Csoport(gyerekek, "alma");
+            csoport.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Csoport csoport = new Csoport(gyerekek, "napocska");
+            csoport.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Csoport csoport = new Csoport(gyerekek, "virág");
+            csoport.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Csoport csoport = new Csoport(gyerekek, "autó");
+            csoport.Show();
         }
     }
 }
