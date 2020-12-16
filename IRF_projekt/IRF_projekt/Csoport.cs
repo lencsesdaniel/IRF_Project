@@ -16,16 +16,20 @@ namespace IRF_projekt
     public partial class Csoport : Form
     {
         private readonly string cs_;
+        private readonly List<Gyerek> gyerekek_;
         public Csoport(List<Gyerek>gyerekek , string cs)
         {
             InitializeComponent();
-            List<Gyerek> csoport = (from x in gyerekek
-                                             where x.Csoport == cs
-                                             select x).ToList();
-
-            dataGridView1.DataSource = csoport;
-            
             cs_ = cs;
+            gyerekek_ = gyerekek;
+            List<Gyerek> csoport = (from x in gyerekek
+                                    where x.Csoport == cs
+                                    select x).ToList();
+            dataGridView1.DataSource = csoport;
+
+
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -47,8 +51,8 @@ namespace IRF_projekt
             else if (cs_ == "alma")
             {
                 Graphics g = panel1.CreateGraphics();
-                g.FillEllipse(new SolidBrush(Color.Red), panel1.Width / 4, 30, 100, 100);
-                g.DrawLine(new Pen(Color.Brown, 10), 12 + panel1.Width / 2, 55, 12 + panel1.Width / 2, 12);
+                g.FillEllipse(new SolidBrush(Color.Red), (panel1.Width / 4), 30, 100, 100);
+                g.DrawLine(new Pen(Color.Brown, 10), (12 + panel1.Width / 2), 55, 12 + panel1.Width / 2, 12);
             }
             else if (cs_ == "napocska")
             {
@@ -69,6 +73,30 @@ namespace IRF_projekt
                 Image imageFile = Image.FromFile("car.png");
                 g.DrawImage(imageFile, new Rectangle(0, 0, 155, 155));
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                List<Gyerek> kirándulók = (from x in gyerekek_
+                                           where x.Csoport == cs_
+                                           where x.Kirándul == true
+                                           select x).ToList();
+                dataGridView1.DataSource = kirándulók;
+            }
+            else
+            {
+                List<Gyerek> csoport = (from x in gyerekek_
+                                        where x.Csoport == cs_
+                                        select x).ToList();
+                dataGridView1.DataSource = csoport;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
