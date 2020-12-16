@@ -72,5 +72,10 @@ namespace IRF_projekt
             Csoport csoport = new Csoport(gyerekek, "autó");
             csoport.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
