@@ -110,16 +110,16 @@ namespace IRF_projekt
         {
             try
             {
-                // Excel elindítása és az applikáció objektum betöltése
+                
                 xlApp = new Excel.Application();
 
-                // Új munkafüzet
+                
                 xlWB = xlApp.Workbooks.Add(Missing.Value);
 
-                // Új munkalap
+                
                 xlSheet = xlWB.ActiveSheet;
 
-                // Tábla létrehozása
+                
                 string[] headers = new string[] { "Név", "Kor", "Csoport", "Kirándul", "Ottalszik", "Étkezések száma" };
                 for (int i = 0; i < headers.Length; i++)
                 {
@@ -127,23 +127,51 @@ namespace IRF_projekt
                 }
                 if (checkBox1.Checked)
                 {
-
+                    object[,] values = new object[kirándulók_.Count, headers.Length];
+                    int counter = 0;
+                    foreach (Gyerek gy in kirándulók_)
+                    {
+                        values[counter, 0] = gy.Név;
+                        values[counter, 1] = gy.Kor;
+                        values[counter, 2] = gy.Csoport;
+                        values[counter, 3] = gy.Kirándul;
+                        values[counter, 4] = gy.Ottalszik;
+                        values[counter, 5] = gy.Étkezések_száma;
+                        counter++;
+                    }
+                    xlSheet.get_Range(
+                        GetCell(2, 1),
+                        GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
                 }
                 else
                 {
-
+                    object[,] values = new object[csoport_.Count, headers.Length];
+                    int counter = 0;
+                    foreach (Gyerek gy in csoport_)
+                    {
+                        values[counter, 0] = gy.Név;
+                        values[counter, 1] = gy.Kor;
+                        values[counter, 2] = gy.Csoport;
+                        values[counter, 3] = gy.Kirándul;
+                        values[counter, 4] = gy.Ottalszik;
+                        values[counter, 5] = gy.Étkezések_száma;
+                        counter++;
+                    }
+                    xlSheet.get_Range(
+                        GetCell(2, 1),
+                        GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
                 }
 
-                // Control átadása a felhasználónak
+                
                 xlApp.Visible = true;
                 xlApp.UserControl = true;
             }
-            catch (Exception ex) // Hibakezelés a beépített hibaüzenettel
+            catch (Exception ex) 
             {
                 string errMsg = string.Format("Error: {0}\nLine: {1}", ex.Message, ex.Source);
                 MessageBox.Show(errMsg, "Error");
 
-                // Hiba esetén az Excel applikáció bezárása automatikusan
+                
                 xlWB.Close(false, Type.Missing, Type.Missing);
                 xlApp.Quit();
                 xlWB = null;
@@ -151,6 +179,22 @@ namespace IRF_projekt
             }
             
 
+        }
+        private string GetCell(int x, int y)
+        {
+            string ExcelCoordinate = "";
+            int dividend = y;
+            int modulo;
+
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                ExcelCoordinate = Convert.ToChar(65 + modulo).ToString() + ExcelCoordinate;
+                dividend = (int)((dividend - modulo) / 26);
+            }
+            ExcelCoordinate += x.ToString();
+
+            return ExcelCoordinate;
         }
     }
 }
