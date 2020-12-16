@@ -33,10 +33,13 @@ namespace IRF_projekt
             List<Gyerek> csoport = (from x in gyerekek
                                     where x.Csoport == cs
                                     select x).ToList();
+            csoport_ = csoport;
             dataGridView1.DataSource = csoport;
 
         }
 
+
+        //panel rajz
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             if (cs_ == "pillangó")
@@ -81,6 +84,8 @@ namespace IRF_projekt
             }
         }
 
+
+        //Checkbox
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -103,6 +108,8 @@ namespace IRF_projekt
             }
         }
 
+
+        //Excel export
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -122,6 +129,18 @@ namespace IRF_projekt
                 {
                     xlSheet.Cells[1, i + 1] = headers[i];
                 }
+
+                Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+                headerRange.Font.Bold = true;
+                headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+                headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                headerRange.EntireColumn.AutoFit();
+                headerRange.RowHeight = 40;
+                headerRange.Interior.Color = Color.LightGreen;
+                headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+
+
+
                 if (checkBox1.Checked)
                 {
                     object[,] values = new object[kirándulók_.Count, headers.Length];
@@ -136,9 +155,23 @@ namespace IRF_projekt
                         values[counter, 5] = gy.Étkezések_száma;
                         counter++;
                     }
+
+                    //excelbe írás
                     xlSheet.get_Range(
                         GetCell(2, 1),
                         GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
+
+                    //formázás
+                    int lastRowID = xlSheet.UsedRange.Rows.Count;
+                    Excel.Range range = xlSheet.get_Range(GetCell(2, 1), GetCell(lastRowID, 1));
+                    range.Interior.Color = Color.YellowGreen;
+                    range.EntireColumn.AutoFit();
+
+                    Excel.Range range1 = xlSheet.get_Range(GetCell(2, 1), GetCell(lastRowID, headers.Length));
+                    range1.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlMedium);
+
+
+
                 }
                 else
                 {
@@ -154,9 +187,21 @@ namespace IRF_projekt
                         values[counter, 5] = gy.Étkezések_száma;
                         counter++;
                     }
+
+                    //excelbe írás
                     xlSheet.get_Range(
                         GetCell(2, 1),
                         GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
+
+                    //formázás
+                    int lastRowID = xlSheet.UsedRange.Rows.Count;
+                    Excel.Range range = xlSheet.get_Range(GetCell(2, 1), GetCell(lastRowID, 1));
+                    range.Interior.Color = Color.YellowGreen;
+                    range.EntireColumn.AutoFit();
+
+
+                    Excel.Range range1 = xlSheet.get_Range(GetCell(2, 1), GetCell(lastRowID, headers.Length));
+                    range1.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlMedium);
                 }
 
                 
@@ -177,6 +222,8 @@ namespace IRF_projekt
             
 
         }
+
+        //excel segédfüggvény
         private string GetCell(int x, int y)
         {
             string ExcelCoordinate = "";
