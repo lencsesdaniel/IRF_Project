@@ -9,3 +9,8 @@ C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.pdb
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.Form1.resources
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\obj\Debug\IRF_projekt.Csoport.resources
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\nevsor.csv
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\car.png
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\napocska.jpg
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\ovoda.png
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\virág.png

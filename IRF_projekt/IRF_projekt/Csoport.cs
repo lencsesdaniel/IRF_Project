@@ -66,20 +66,20 @@ namespace IRF_projekt
             else if (cs_ == "napocska")
             {
                 Graphics g = panel1.CreateGraphics();
-                Image imageFile = Image.FromFile("napocska.jpg");
+                Image imageFile = Image.FromFile("Images/napocska.jpg");
                 g.DrawImage(imageFile, new Rectangle(0, 0, 205, 205));
             }
             else if (cs_ == "virág")
             {
                 Graphics g = panel1.CreateGraphics();
-                Image imageFile = Image.FromFile("virág.png");
+                Image imageFile = Image.FromFile("Images/virág.png");
                 g.DrawImage(imageFile, new Rectangle(0, 0, 205, 205));
 
             }
             else if (cs_ == "autó")
             {
                 Graphics g = panel1.CreateGraphics();
-                Image imageFile = Image.FromFile("car.png");
+                Image imageFile = Image.FromFile("Images/car.png");
                 g.DrawImage(imageFile, new Rectangle(0, 0, 205, 205));
             }
         }
