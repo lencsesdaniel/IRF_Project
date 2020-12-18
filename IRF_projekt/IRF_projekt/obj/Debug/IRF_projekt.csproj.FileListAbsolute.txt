@@ -14,3 +14,4 @@ C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Imag
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\napocska.jpg
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\ovoda.png
 C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\virág.png
+C:\Users\Danabol\source\repos\IRF_Project\IRF_projekt\IRF_projekt\bin\Debug\Images\pine.ico

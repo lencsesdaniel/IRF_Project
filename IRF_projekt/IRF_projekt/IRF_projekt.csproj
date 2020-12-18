@@ -111,6 +111,9 @@
     <Content Include="Images\ovoda.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\pine.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\virág.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
